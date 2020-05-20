@@ -1,0 +1,31 @@
+
+Showing logs for build [32mnicusorserban-jenkinsx-quicksta-p4gbz-6[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-csxxs[0m
+{"level":"info","ts":1590016665.8569157,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590016665.85735,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mnicusorserban-jenkinsx-quicksta-p4gbz-6[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-58f9f[0m
+{"level":"info","ts":1590016669.3690963,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590016669.3721488,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mnicusorserban-jenkinsx-quicksta-p4gbz-6[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mnicusorserban-jenkinsx-quicksta-p4gbz-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nicusorserban-jenkinsx-quicksta-p4gbz-kxhkx[0m
+{"level":"info","ts":1590016765.6487317,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590016767.2558815,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*************/jenkinsx-quickstart.git @ v0.0.4 in path /workspace/source"}
+
+Showing logs for build [32mnicusorserban-jenkinsx-quicksta-p4gbz-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mnicusorserban-jenkinsx-quicksta-p4gbz-6[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mnicusorserban-jenkinsx-quicksta-p4gbz-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/jenkinsx-quickstart main.go
+
+Showing logs for build [32mnicusorserban-jenkinsx-quicksta-p4gbz-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0520 23:19:37.065352      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "docker.io/*************/jenkinsx-quickstart:0.0.4": POST https://index.docker.io/v2/*************/jenkinsx-quickstart/blobs/uploads/: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:*************/jenkinsx-quickstart Type:repository] map[Action:push Class: Name:*************/jenkinsx-quickstart Type:repository]]
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
